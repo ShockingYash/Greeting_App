@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title> greeting by Yash </title>
+		  <style>
+        *{text-align:center;font-family:Cambria;font-size:40px;}
+			body{background-color:azure;}
+			h1{background-color: black;color:white;}
+    </style>
+		</head>
+		<body>
+            <h1> Greeting App </h1>
+	    <form onsubmit="show()">
+            	<input type="text"  id="name" placeholder="Enter Your Name"/>
+		<br/><br/>
+		<input type="submit"/>
+            </form>
+		<h2 id="msg"/>
+	    <script >
+		function show()
+		{
+	   event.preventDefault();
+           let Name =document.getElementById("name");
+	   let msg =document.getElementById("msg");
+           let d = new Date();
+	   let hr = d.getHours();
+           if (hr < 12)
+		msg.innerHTML= "GOOD MORNING " + Name.value;
+	   else if (hr < 16)
+	        msg.innerHTML= "GOOD AFTERNOON " + Name.value;
+	   else 
+	        msg.innerHTML= "GOOD EVENING " + Name.value;
+
+}
+	  	</script>
+	</body>
+</html>
